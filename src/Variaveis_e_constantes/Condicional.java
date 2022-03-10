@@ -18,6 +18,8 @@ public class Condicional {
 		} else {
 			System.out.print("Parabéns, você reprovou.");
 		}
+	
+		scanner.close();
 	}
 
 }
