@@ -29,4 +29,5 @@ public class Exercicio {
 		return (subTotalDoValorDoProduto*10.0)/100;
 	}
 	
+	
 }
