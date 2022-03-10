@@ -16,11 +16,12 @@ public class Exercicio {
 		double descontoNoSubtotalDoValorDoProduto = desconto(subTotalDoValorDoProduto);
 		boolean quantidadeMaiorOuIgualADez = quantidadeDeProdutos > 10;
 
+		System.out.print("Valor total: " + (subTotalDoValorDoProduto));
+
 		if (quantidadeMaiorOuIgualADez) {
 			System.out.print(
-					"\nValor total com desconto: " + (subTotalDoValorDoProduto - descontoNoSubtotalDoValorDoProduto));
+					"\nValor total após desconto: " + (subTotalDoValorDoProduto - descontoNoSubtotalDoValorDoProduto));
 		}
-		System.out.print("Valor total: " + (subTotalDoValorDoProduto));
 		scanner.close();
 	}
 
