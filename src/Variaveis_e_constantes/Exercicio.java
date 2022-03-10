@@ -10,11 +10,11 @@ public class Exercicio {
 		System.out.print("Informe o valor do produto: ");
 		double valorDoProduto = scanner.nextDouble();
 		System.out.print("Informe a quantidade de produtos que deseja comprar: ");
-		byte quantidadesDeProdutos = scanner.nextByte();
+		byte quantidadeDeProdutos = scanner.nextByte();
 
-		double subTotalDoValorDoProduto = subTotalDoValorDoProduto(valorDoProduto, quantidadesDeProdutos);
+		double subTotalDoValorDoProduto = subTotalDoValorDoProduto(valorDoProduto, quantidadeDeProdutos);
 		double descontoNoSubtotalDoValorDoProduto = desconto(subTotalDoValorDoProduto);
-		boolean quantidadeMaiorOuIgualADez = quantidadesDeProdutos > 10;
+		boolean quantidadeMaiorOuIgualADez = quantidadeDeProdutos > 10;
 
 		if (quantidadeMaiorOuIgualADez) {
 			System.out.print(
