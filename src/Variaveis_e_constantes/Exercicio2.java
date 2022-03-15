@@ -17,7 +17,7 @@ public class Exercicio2 {
 
 		if (escolhaDaOperação < 1 || escolhaDaOperação > 4) {
 			while (escolhaDaOperação < 1 || escolhaDaOperação > 4) {
-				System.out.print("Por favor, digite um número correto");
+				System.out.print("\nPor favor, digite um número correto");
 				System.out.print("\n(1)Adição \n(2)Subtração \n(3)Multiplicação \n(4)Divisão");
 				System.out.print("\nEscolha a operação matématica: ");
 				escolhaDaOperação = scanner.nextInt();
