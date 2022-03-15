@@ -11,7 +11,7 @@ public class Exercicio8 {
 		double salarioPorHora = scanner.nextDouble();
 		System.out.print("Informe a quantidade de horas trabalhadas: ");
 		int horas = scanner.nextInt();
-		System.out.print("Seu salario neste mes sera: "+ (salarioPorHora * horas));
+		System.out.print("Seu salario neste mes sera: " + (salarioPorHora * horas));
 	}
 
 }
