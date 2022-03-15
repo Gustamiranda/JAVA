@@ -21,17 +21,20 @@ public class Exercicio2 {
 
 		case 1: {
 
-			System.out.print("Adição: "+ primeiroNumero + " + " + segundoNumero + " = " + (primeiroNumero + segundoNumero));
+			System.out.print(
+					"Adição: " + primeiroNumero + " + " + segundoNumero + " = " + (primeiroNumero + segundoNumero));
 		}
 			break;
 
 		case 2: {
-			System.out.print("Subtração: "+ primeiroNumero + " - " + segundoNumero + " = " + (primeiroNumero - segundoNumero));
+			System.out.print(
+					"Subtração: " + primeiroNumero + " - " + segundoNumero + " = " + (primeiroNumero - segundoNumero));
 		}
 			break;
 
 		case 3: {
-			System.out.print("Multiplicação: "+ primeiroNumero + " * " + segundoNumero + " = " + (primeiroNumero * segundoNumero));
+			System.out.print("Multiplicação: " + primeiroNumero + " * " + segundoNumero + " = "
+					+ (primeiroNumero * segundoNumero));
 		}
 			break;
 
@@ -39,6 +42,7 @@ public class Exercicio2 {
 			double Divisão = primeiroNumero / segundoNumero;
 			System.out.print("Divisão: " + primeiroNumero + " / " + segundoNumero + " = " + (Divisão));
 		}
+			break;
 		}
 	}
 
