@@ -6,14 +6,24 @@ public class Exercicio2 {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
+		int escolhaDaOperação;
 
 		System.out.println("Digite o primeiro número da operação: ");
 		int primeiroNumero = scanner.nextInt();
 
 		System.out.print("\n(1)Adição \n(2)Subtração \n(3)Multiplicação \n(4)Divisão");
 		System.out.print("\nEscolha a operação matématica: ");
-		int escolhaDaOperação = scanner.nextInt();
+		escolhaDaOperação = scanner.nextInt();
 
+		if (escolhaDaOperação < 1 || escolhaDaOperação > 4) {
+			while (escolhaDaOperação < 1 || escolhaDaOperação > 4) {
+				System.out.print("Por favor, digite um número correto");
+				System.out.print("\n(1)Adição \n(2)Subtração \n(3)Multiplicação \n(4)Divisão");
+				System.out.print("\nEscolha a operação matématica: ");
+				escolhaDaOperação = scanner.nextInt();
+
+			}
+		}
 		System.out.print("Digite o segundo numero da operação: ");
 		int segundoNumero = scanner.nextInt();
 
