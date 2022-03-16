@@ -56,6 +56,6 @@ public class CalculadoraBásica2 {
 			double Divisão = primeiroNumero / segundoNumero;
 			System.out.print("Divisão: " + primeiroNumero + " / " + segundoNumero + " = " + (Divisão));
 		}
-
+		scanner.close();
 	}
 }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Exercicio04 {
 	static final byte TEMPO_MINIMO_DE_CONTRIBUIÇÃO = 25;
-	static final byte IDADE_MINIMA = 55;
+	static final byte IDADE_MINIMA_PARA_APOSENTAR = 55;
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -15,7 +15,7 @@ public class Exercicio04 {
 		System.out.print("Informe o tempo de contribuição com a previdência: ");
 		byte tempoDeContribuição = scanner.nextByte();
 
-		boolean passarNasCondições = idade >= IDADE_MINIMA && tempoDeContribuição >= TEMPO_MINIMO_DE_CONTRIBUIÇÃO;
+		boolean passarNasCondições = idade >= IDADE_MINIMA_PARA_APOSENTAR && tempoDeContribuição >= TEMPO_MINIMO_DE_CONTRIBUIÇÃO;
 
 		if (passarNasCondições) {
 			System.out.print("Você pode se aposentar.");
