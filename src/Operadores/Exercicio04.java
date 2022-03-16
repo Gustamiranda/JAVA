@@ -15,10 +15,10 @@ public class Exercicio04 {
 		System.out.print("Informe o tempo de contribuição com a previdência: ");
 		byte tempoDeContribuição = scanner.nextByte();
 
-		boolean atenderaosRequisitos = idade >= IDADE_MINIMA_PARA_APOSENTAR
+		boolean atenderAosRequisitos = idade >= IDADE_MINIMA_PARA_APOSENTAR
 				&& tempoDeContribuição >= TEMPO_MINIMO_DE_CONTRIBUIÇÃO;
 
-		if (atenderaosRequisitos) {
+		if (atenderAosRequisitos) {
 			System.out.print("Você pode se aposentar.");
 		} else {
 			System.out.print("Você não pode se aposentar.");
