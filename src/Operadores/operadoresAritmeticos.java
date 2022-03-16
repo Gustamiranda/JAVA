@@ -1,4 +1,4 @@
-package Variaveis_e_constantes;
+package Operadores;
 
 public class operadoresAritmeticos {
 
