@@ -11,27 +11,27 @@ public class Exercicio1 {
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.print("Informe sua nota na prova de matemática: ");
-		float notaDaProvaDeMatématica = scanner.nextFloat();
+		float notaDaProvaDeMatematica = scanner.nextFloat();
 
 		System.out.print("Informe sua nota na prova de português: ");
 		float notaDaProvaDePortugues = scanner.nextFloat();
 
-		float somaDasDuasProvas = somaDasNotas(notaDaProvaDeMatématica, notaDaProvaDePortugues);
+		float somaDasDuasProvas = somaDasNotas(notaDaProvaDeMatematica, notaDaProvaDePortugues);
 
-		boolean nãoalcançouANotaMinima = somaDasDuasProvas < NOTA_TOTAL_MINIMA_PARA_PASSAR;
-		boolean nãoAlcançouAMédiaNaProvaDeMatématica = notaDaProvaDeMatématica < NOTA_MINIMA_PARA_PASSAR_EM_MATEMATICA;
-		boolean nãoAlcançouAMédiaNaProvaDePortugues = notaDaProvaDePortugues < NOTA_MINIMA_PARA_PASSAR_EM_PORTUGUES;
+		boolean naoalcançouANotaMinima = somaDasDuasProvas < NOTA_TOTAL_MINIMA_PARA_PASSAR;
+		boolean naoAlcançouANotaMinimaNaProvaDeMatematica = notaDaProvaDeMatematica < NOTA_MINIMA_PARA_PASSAR_EM_MATEMATICA;
+		boolean naoAlcançouANotaMinimaNaProvaDePortugues = notaDaProvaDePortugues < NOTA_MINIMA_PARA_PASSAR_EM_PORTUGUES;
 
-		if (nãoAlcançouAMédiaNaProvaDeMatématica || nãoAlcançouAMédiaNaProvaDePortugues || nãoalcançouANotaMinima) {
+		if (naoAlcançouANotaMinimaNaProvaDeMatematica || naoAlcançouANotaMinimaNaProvaDePortugues || naoalcançouANotaMinima) {
 
-			System.out.print("Nota na prova de matématica: " + notaDaProvaDeMatématica
+			System.out.print("Nota na prova de matématica: " + notaDaProvaDeMatematica
 					+ "\nNota na prova de português: " + notaDaProvaDePortugues + "\nNota total: " + somaDasDuasProvas);
 
 			System.out.print("\nInfelizmente você não passou.");
 
 		} else {
 
-			System.out.print("Nota na prova de matématica: " + notaDaProvaDeMatématica
+			System.out.print("Nota na prova de matématica: " + notaDaProvaDeMatematica
 					+ "\nNota na prova de português: " + notaDaProvaDePortugues + "\nNota final: " + somaDasDuasProvas);
 
 			System.out.print("\nParabéns, você passou.");
