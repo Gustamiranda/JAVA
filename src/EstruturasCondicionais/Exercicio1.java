@@ -5,10 +5,6 @@ import java.util.Scanner;
 public class Exercicio1 {
 	static final float NOTA_MINIMA_PARA_PASSAR = 150;
 
-	public static void mostrarNotas() {
-
-	}
-
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 
