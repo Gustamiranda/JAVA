@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Exercicio1 {
 	static final float NOTA_MINIMA_PARA_PASSAR = 150;
+	static final float NOTA_MINIMA_PARA_PASSAR_EM_MATEMATICA = 60;
+	static final float NOTA_MINIMA_PARA_PASSAR_EM_PORTUGUES = 60;
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -16,27 +18,23 @@ public class Exercicio1 {
 
 		float somaDasDuasProvas = somaDasNotas(notaDaProvaDeMatématica, notaDaProvaDePortugues);
 
-		boolean alcançouANotaMinima = somaDasDuasProvas >= 150;
-		boolean nãoAlcançouAMédiaNaProvaDeMatématica = notaDaProvaDeMatématica < 60;
-		boolean nãoAlcançouAMédiaNaProvaDePortugues = notaDaProvaDePortugues < 60;
+		boolean nãoalcançouANotaMinima = somaDasDuasProvas < NOTA_MINIMA_PARA_PASSAR;
+		boolean nãoAlcançouAMédiaNaProvaDeMatématica = notaDaProvaDeMatématica < NOTA_MINIMA_PARA_PASSAR_EM_MATEMATICA;
+		boolean nãoAlcançouAMédiaNaProvaDePortugues = notaDaProvaDePortugues < NOTA_MINIMA_PARA_PASSAR_EM_PORTUGUES;
 
-		if (nãoAlcançouAMédiaNaProvaDeMatématica || nãoAlcançouAMédiaNaProvaDePortugues && alcançouANotaMinima) {
+		if (nãoAlcançouAMédiaNaProvaDeMatématica || nãoAlcançouAMédiaNaProvaDePortugues || nãoalcançouANotaMinima) {
 
 			System.out.print("Nota na prova de matématica: " + notaDaProvaDeMatématica
 					+ "\nNota na prova de português: " + notaDaProvaDePortugues + "\nNota final: " + somaDasDuasProvas);
 
 			System.out.print("\nInfelizmente você não passou.");
-		} else if (alcançouANotaMinima) {
-			System.out.print("Nota na prova de matématica: " + notaDaProvaDeMatématica
-					+ "\nNota na prova de português: " + notaDaProvaDePortugues + "\nNota final: " + somaDasDuasProvas);
 
-			System.out.print("\nParabéns, você passou.");
 		} else {
 
 			System.out.print("Nota na prova de matématica: " + notaDaProvaDeMatématica
 					+ "\nNota na prova de português: " + notaDaProvaDePortugues + "\nNota final: " + somaDasDuasProvas);
 
-			System.out.print("\nInfelizmente você não passou.");
+			System.out.print("\nParabéns, você passou.");
 		}
 
 	}
