@@ -11,43 +11,43 @@ public class CalculadoraBásica2 {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		int escolhaDaOperação;
+		int escolhaDaOperacao;
 
 		System.out.println("Digite o primeiro número da operação: ");
 		int primeiroNumero = scanner.nextInt();
 
 		System.out.print("\n(1)Adição \n(2)Subtração \n(3)Multiplicação \n(4)Divisão");
 		System.out.print("\nEscolha a operação matématica: ");
-		escolhaDaOperação = scanner.nextInt();
+		escolhaDaOperacao = scanner.nextInt();
 
-		if (escolhaDaOperação < 1 || escolhaDaOperação > 4) {
-			while (escolhaDaOperação < 1 || escolhaDaOperação > 4) {
+		if (escolhaDaOperacao < 1 || escolhaDaOperacao > 4) {
+			while (escolhaDaOperacao < 1 || escolhaDaOperacao > 4) {
 				System.out.print("\nPor favor, digite um número correto");
 				System.out.print("\n(1)Adição \n(2)Subtração \n(3)Multiplicação \n(4)Divisão");
 				System.out.print("\nEscolha a operação matématica: ");
-				escolhaDaOperação = scanner.nextInt();
+				escolhaDaOperacao = scanner.nextInt();
 
 			}
 		}
 		System.out.print("Digite o segundo numero da operação: ");
 		int segundoNumero = scanner.nextInt();
 
-		boolean escolherSoma = escolhaDaOperação == ADICAO;
-		boolean escolherSubtração = escolhaDaOperação == SUBTRACAO;
-		boolean escolherMultiplicação = escolhaDaOperação == MULTIPLICACAO;
-		boolean escolherDivisao = escolhaDaOperação == DIVISAO;
+		boolean escolherSoma = escolhaDaOperacao == ADICAO;
+		boolean escolherSubtracao = escolhaDaOperacao == SUBTRACAO;
+		boolean escolherMultiplicacao = escolhaDaOperacao == MULTIPLICACAO;
+		boolean escolherDivisao = escolhaDaOperacao == DIVISAO;
 
 		if (escolherSoma) {
 			System.out.print(
 					"Adição: " + primeiroNumero + " + " + segundoNumero + " = " + (primeiroNumero + segundoNumero));
 		}
 
-		else if (escolherSubtração) {
+		else if (escolherSubtracao) {
 			System.out.print(
 					"Subtração: " + primeiroNumero + " - " + segundoNumero + " = " + (primeiroNumero - segundoNumero));
 		}
 
-		else if (escolherMultiplicação) {
+		else if (escolherMultiplicacao) {
 			System.out.print("Multiplicação: " + primeiroNumero + " * " + segundoNumero + " = "
 					+ (primeiroNumero * segundoNumero));
 		}

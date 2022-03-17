@@ -6,28 +6,28 @@ public class CalculadoraBásica {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		int escolhaDaOperação;
+		int escolhaDaOperacao;
 
 		System.out.println("Digite o primeiro número da operação: ");
 		int primeiroNumero = scanner.nextInt();
 
 		System.out.print("\n(1)Adição \n(2)Subtração \n(3)Multiplicação \n(4)Divisão");
 		System.out.print("\nEscolha a operação matématica: ");
-		escolhaDaOperação = scanner.nextInt();
+		escolhaDaOperacao = scanner.nextInt();
 
-		if (escolhaDaOperação < 1 || escolhaDaOperação > 4) {
-			while (escolhaDaOperação < 1 || escolhaDaOperação > 4) {
+		if (escolhaDaOperacao < 1 || escolhaDaOperacao > 4) {
+			while (escolhaDaOperacao < 1 || escolhaDaOperacao > 4) {
 				System.out.print("\nPor favor, digite um número correto");
 				System.out.print("\n(1)Adição \n(2)Subtração \n(3)Multiplicação \n(4)Divisão");
 				System.out.print("\nEscolha a operação matématica: ");
-				escolhaDaOperação = scanner.nextInt();
+				escolhaDaOperacao = scanner.nextInt();
 
 			}
 		}
 		System.out.print("Digite o segundo numero da operação: ");
 		int segundoNumero = scanner.nextInt();
 
-		switch (escolhaDaOperação) {
+		switch (escolhaDaOperacao) {
 
 		case 1: {
 
