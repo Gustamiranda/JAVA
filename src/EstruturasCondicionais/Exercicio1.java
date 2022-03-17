@@ -3,12 +3,13 @@ package EstruturasCondicionais;
 import java.util.Scanner;
 
 public class Exercicio1 {
+	static final Scanner scanner = new Scanner(System.in);
+
 	static final float NOTA_TOTAL_MINIMA_PARA_PASSAR = 150;
 	static final float NOTA_MINIMA_PARA_PASSAR_EM_MATEMATICA = 60;
 	static final float NOTA_MINIMA_PARA_PASSAR_EM_PORTUGUES = 60;
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
 
 		System.out.print("Informe sua nota na prova de matemática: ");
 		float notaDaProvaDeMatematica = scanner.nextFloat();
@@ -22,7 +23,8 @@ public class Exercicio1 {
 		boolean naoAlcançouANotaMinimaNaProvaDeMatematica = notaDaProvaDeMatematica < NOTA_MINIMA_PARA_PASSAR_EM_MATEMATICA;
 		boolean naoAlcançouANotaMinimaNaProvaDePortugues = notaDaProvaDePortugues < NOTA_MINIMA_PARA_PASSAR_EM_PORTUGUES;
 
-		if (naoAlcançouANotaMinimaNaProvaDeMatematica || naoAlcançouANotaMinimaNaProvaDePortugues || naoalcançouANotaMinima) {
+		if (naoAlcançouANotaMinimaNaProvaDeMatematica || naoAlcançouANotaMinimaNaProvaDePortugues
+				|| naoalcançouANotaMinima) {
 
 			System.out.print("Nota na prova de matématica: " + notaDaProvaDeMatematica
 					+ "\nNota na prova de português: " + notaDaProvaDePortugues + "\nNota total: " + somaDasDuasProvas);
