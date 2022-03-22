@@ -21,9 +21,9 @@ public class Exercicio5 {
 
 		boolean alunoAprovado = aprovar(mediaDasNotas);
 		boolean alunoReprovado = reprovar(mediaDasNotas);
-		boolean alunoAprovadoComDistinção = aprovarComDistinção(mediaDasNotas);
+		boolean alunoAprovadoComDistincao = aprovarComDistincao(mediaDasNotas);
 
-		exibirResultado(alunoAprovado, alunoReprovado, alunoAprovadoComDistinção, mediaDasNotas);
+		exibirResultado(alunoAprovado, alunoReprovado, alunoAprovadoComDistincao, mediaDasNotas);
 	}
 
 	public static double calcularMedia(double somaDasNotas) {
@@ -41,12 +41,12 @@ public class Exercicio5 {
 		return mediaDasNotas < 7;
 	}
 
-	public static boolean aprovarComDistinção(double mediaDasNotas) {
+	public static boolean aprovarComDistincao(double mediaDasNotas) {
 
 		return mediaDasNotas == 10;
 	}
 
-	public static void exibirResultado(boolean alunoAprovado, boolean alunoReprovado, boolean alunoAprovadoComDistinção,
+	public static void exibirResultado(boolean alunoAprovado, boolean alunoReprovado, boolean alunoAprovadoComDistincao,
 			double mediaDasNotas) {
 
 		if (alunoAprovado) {
@@ -56,7 +56,7 @@ public class Exercicio5 {
 			System.out.print("Media: " + mediaDasNotas + "\n");
 			System.out.print("Aluno reprovado");
 
-		} else if (alunoAprovadoComDistinção) {
+		} else if (alunoAprovadoComDistincao) {
 			System.out.print("Media: " + mediaDasNotas + "\n");
 			System.out.print("Aluno aprovado com distinção");
 		} else {
