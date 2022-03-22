@@ -3,47 +3,33 @@ package EstruturasCondicionais;
 import java.util.Scanner;
 
 public class Exercicio1 {
-	static final Scanner scanner = new Scanner(System.in);
 
-	static final float NOTA_TOTAL_MINIMA_PARA_PASSAR = 150;
-	static final float NOTA_MINIMA_PARA_PASSAR_EM_MATEMATICA = 60;
-	static final float NOTA_MINIMA_PARA_PASSAR_EM_PORTUGUES = 60;
+	static final Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
-		System.out.print("Informe sua nota na prova de matemática: ");
-		float notaDaProvaDeMatematica = scanner.nextFloat();
+		PedirnumerosEExibirOMaior();
 
-		System.out.print("Informe sua nota na prova de português: ");
-		float notaDaProvaDePortugues = scanner.nextFloat();
+	}
 
-		float somaDasDuasProvas = somaDasNotas(notaDaProvaDeMatematica, notaDaProvaDePortugues);
+	public static void PedirnumerosEExibirOMaior() {
 
-		boolean naoalcançouANotaMinima = somaDasDuasProvas < NOTA_TOTAL_MINIMA_PARA_PASSAR;
-		boolean naoAlcançouANotaMinimaNaProvaDeMatematica = notaDaProvaDeMatematica < NOTA_MINIMA_PARA_PASSAR_EM_MATEMATICA;
-		boolean naoAlcançouANotaMinimaNaProvaDePortugues = notaDaProvaDePortugues < NOTA_MINIMA_PARA_PASSAR_EM_PORTUGUES;
+		int[] numeros = new int[2];
 
-		if (naoAlcançouANotaMinimaNaProvaDeMatematica || naoAlcançouANotaMinimaNaProvaDePortugues
-				|| naoalcançouANotaMinima) {
+		int maior = 0;
 
-			System.out.print("Nota na prova de matématica: " + notaDaProvaDeMatematica
-					+ "\nNota na prova de português: " + notaDaProvaDePortugues + "\nNota total: " + somaDasDuasProvas);
+		for (int c = 0; c < numeros.length; c++) {
 
-			System.out.print("\nInfelizmente você não passou.");
+			System.out.print("Informe o " + (c + 1) + "° Numero: ");
+			numeros[c] = scanner.nextInt();
 
-		} else {
+			if (numeros[c] > maior) {
 
-			System.out.print("Nota na prova de matématica: " + notaDaProvaDeMatematica
-					+ "\nNota na prova de português: " + notaDaProvaDePortugues + "\nNota final: " + somaDasDuasProvas);
-
-			System.out.print("\nParabéns, você passou.");
+				maior = numeros[c];
+			}
 		}
+		System.out.print("Maior numero: " + maior);
 
 	}
-
-	public static float somaDasNotas(float notaDaProvaDeMatématica, float notaDaProvaDePortugues) {
-
-		return notaDaProvaDeMatématica + notaDaProvaDePortugues;
-	}
-
+	
 }
