@@ -7,22 +7,26 @@ public class Exercicio4 {
 
 	public static void main(String[] args) {
 
-		char letra;
+		System.out.print("Informe a letra: ");
+		char letra = scanner.next().charAt(0);
 
-		System.out.print("Informe a letra");
-		letra = scanner.next().charAt(0);
+		boolean Letravogal = vogal(letra);
 
-		boolean vogal = letra == 'a' || letra == 'i' || letra == 'e' || letra == 'o' || letra == 'u';
-
-		Exibirresultado(vogal);
+		Exibirresultado(Letravogal);
 	}
 
-	public static void Exibirresultado(boolean vogal) {
+	public static boolean vogal(char letra) {
 
-		if (vogal) {
+		return letra == 'a' || letra == 'i' || letra == 'e' || letra == 'o' || letra == 'u';
+
+	}
+
+	public static void Exibirresultado(boolean Letravogal) {
+
+		if (Letravogal) {
 			System.out.print("A letra é uma vogal");
 		} else {
-			System.out.print("A letra é uma consoanteF");
+			System.out.print("A letra é uma consoante");
 		}
 
 	}
