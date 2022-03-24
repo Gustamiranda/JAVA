@@ -8,25 +8,32 @@ public class Exercicio3 {
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.print("Informe a Letra: ");
-		char letradigitada = scanner.next().charAt(0);
+		char letraDigitada = scanner.next().charAt(0);
 
-		verificarLetra(letradigitada);
+		boolean sexoMasculino = Masculino(letraDigitada);
+		boolean sexoFeminino = Feminino(letraDigitada);
+
+		exibirResultado(sexoMasculino, sexoFeminino);
 	}
 
-	public static void verificarLetra(char letradigitada) {
+	public static boolean Feminino(char letradigitada) {
 
-		boolean letraF = letradigitada == 'F' || letradigitada == 'f';
-		boolean letraM = letradigitada == 'M' || letradigitada == 'm';
+		return letradigitada == 'F' || letradigitada == 'f';
+	}
 
-		if (letraF) {
+	public static boolean Masculino(char letraDigitada) {
+		return letraDigitada == 'M' || letraDigitada == 'm';
 
-			System.out.print("Sexo feminino");
-		} else if (letraM) {
+	}
+
+	public static void exibirResultado(boolean sexoMasculino, boolean sexoFeminino) {
+
+		if (sexoMasculino) {
 			System.out.print("Sexo masculino");
+		} else if (sexoFeminino) {
+			System.out.print("Sexo feminino");
 		} else {
-			System.out.print("Sexo Invalido");
+			System.out.print("Inválido");
 		}
-
 	}
-
 }
