@@ -12,7 +12,7 @@ public class Exercicio4 {
 
 		boolean Letravogal = vogal(letra);
 
-		Exibirresultado(Letravogal);
+		ExibirResultado(Letravogal);
 	}
 
 	public static boolean vogal(char letra) {
@@ -21,7 +21,7 @@ public class Exercicio4 {
 
 	}
 
-	public static void Exibirresultado(boolean Letravogal) {
+	public static void ExibirResultado(boolean Letravogal) {
 
 		if (Letravogal) {
 			System.out.print("A letra é uma vogal");
