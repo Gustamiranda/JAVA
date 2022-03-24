@@ -36,8 +36,4 @@ public class Exercicio02 {
 		return faturamentoRealDaEmpresaNoUltimoAno >= metaDeFaturamento;
 	}
 
-	public static void calcularBonus() {
-		
-	
-	}
 }
