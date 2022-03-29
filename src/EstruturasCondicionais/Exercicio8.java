@@ -11,8 +11,11 @@ public class Exercicio8 {
 		for (int c = 0; c < precos.length; c++) {
 
 			Double.parseDouble(JOptionPane.showInputDialog( "Informe o preço do " + (c+1) + "° produto: "));
+		
+		
+			
 		}
-
+		
 	}
 
 }

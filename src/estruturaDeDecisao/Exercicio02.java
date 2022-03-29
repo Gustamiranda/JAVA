@@ -44,7 +44,7 @@ public class Exercicio02 {
 
 	public static double calculoDaPorcentagem(double metaDeFaturamentoAnual) {
 
-		return (0.80 * metaDeFaturamentoAnual) / 100;
+		return (0.80 * metaDeFaturamentoAnual);
 	}
 
 	public static boolean verificarSeFaturamentoFoiIgualOuMaiorAOitentaPorcentoDaMeta(double PorcentagemDe80DaMeta,
