@@ -44,7 +44,7 @@ public class Exercicio02 {
 
 	public static double calculoDaPorcentagem(double metaDeFaturamentoAnual) {
 
-		return (metaDeFaturamentoAnual * 0.80);
+		return (metaDeFaturamentoAnual * 0.8)/100;
 	}
 
 	public static boolean verificarSeFaturamentoFoiIgualOuMaiorAOitentaPorcentoDaMeta(double PorcentagemDe80DaMeta,
@@ -59,10 +59,10 @@ public class Exercicio02 {
 
 		if (FaturamentoFoiMaiorOuIgualMeta) {
 
-			JOptionPane.showMessageDialog(null, "Seu prêmio será: " + mediaDoSalarioDoFuncionario);
+			JOptionPane.showMessageDialog(null, "Seu prêmio será: " + mediaDoSalarioDoFuncionario + "R$");
 		} else if (FaturamentoFoiIgualOuMaiorAOitentaPorcentoDaMeta) {
 
-			JOptionPane.showMessageDialog(null, "Seu prêmio será: " + OitentaPorcentoDaMeta);
+			JOptionPane.showMessageDialog(null, "Seu prêmio será: " + OitentaPorcentoDaMeta + "R$");
 		} else {
 			JOptionPane.showMessageDialog(null, "Não recebe prêmio.");
 		}
