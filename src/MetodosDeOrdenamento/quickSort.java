@@ -1,0 +1,10 @@
+package MetodosDeOrdenamento;
+
+public class quickSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
