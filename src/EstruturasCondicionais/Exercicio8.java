@@ -1,8 +1,10 @@
 package EstruturasCondicionais;
 
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class Exercicio8 {
+
+	static final Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
@@ -10,12 +12,22 @@ public class Exercicio8 {
 
 		for (int c = 0; c < precos.length; c++) {
 
-			Double.parseDouble(JOptionPane.showInputDialog( "Informe o preço do " + (c+1) + "° produto: "));
-		
-		
-			
+			System.out.print("Informe o preço do " + (c + 1) + "° produto: ");
+			precos[c] = scanner.nextDouble();
+
 		}
-		
+		double menor = precos[0];
+
+		for (int c = 0; c < precos.length; c++) {
+
+			if (menor > precos[c]) {
+
+				menor = precos[c];
+			}
+
+		}
+
+		System.out.print("O produto que você deve comprar é o de " + menor + "R$");
 	}
 
 }
