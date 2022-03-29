@@ -9,7 +9,7 @@ public class Exercicio02 {
 		double metaDeFaturamentoAnual = receberMetaDeFaturamentoAnual();
 		double faturamentoRealDaEmpresaNoUltimoAno = receberFaturamentoRealDaEmpresaNoUltimoAno();
 		double mediaDoSalarioDoFuncionario = receberMediaSalarialDoFuncionarioParaOAnoAnterior();
-		double OitentaPorcentoDaMeta = calculoDaPorcentagem(metaDeFaturamentoAnual);
+		double OitentaPorcentoDaMeta = calcularOitentaPorcentoDaMeta(metaDeFaturamentoAnual);
 
 		boolean FaturamentoFoiMaiorOuIgualMeta = verificarSeFaturamentoFoiMaiorOuIgualMeta(
 				faturamentoRealDaEmpresaNoUltimoAno, metaDeFaturamentoAnual);
@@ -42,7 +42,7 @@ public class Exercicio02 {
 		return faturamentoRealDaEmpresaNoUltimoAno >= metaDeFaturamentoAnual;
 	}
 
-	public static double calculoDaPorcentagem(double metaDeFaturamentoAnual) {
+	public static double calcularOitentaPorcentoDaMeta(double metaDeFaturamentoAnual) {
 
 		return (metaDeFaturamentoAnual * 0.8);
 	}
