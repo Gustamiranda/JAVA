@@ -10,7 +10,7 @@ public class Exercicio8 {
 
 		for (int c = 0; c < precos.length; c++) {
 
-			JOptionPane.showMessageDialog(null, "Informe o preço do " + (c+1) + "° produto: ");
+			Double.parseDouble(JOptionPane.showInputDialog( "Informe o preço do " + (c+1) + "° produto: "));
 		}
 
 	}
