@@ -9,15 +9,15 @@ public class Exercicio02 {
 		double metaDeFaturamentoAnual = receberMetaDeFaturamentoAnual();
 		double faturamentoRealDaEmpresaNoUltimoAno = receberFaturamentoRealDaEmpresaNoUltimoAno();
 		double mediaDoSalarioDoFuncionario = receberMediaSalarialDoFuncionarioParaOAnoAnterior();
-		double OitentaPorcentoDaMeta = calcularOitentaPorcentoDaMeta(metaDeFaturamentoAnual);
+		double oitentaPorcentoDaMeta = calcularOitentaPorcentoDaMeta(metaDeFaturamentoAnual);
 
-		boolean FaturamentoFoiMaiorOuIgualMeta = verificarSeFaturamentoFoiMaiorOuIgualMeta(
+		boolean faturamentoFoiMaiorOuIgualMeta = verificarSeFaturamentoFoiMaiorOuIgualMeta(
 				faturamentoRealDaEmpresaNoUltimoAno, metaDeFaturamentoAnual);
-		boolean FaturamentoFoiIgualOuMaiorAOitentaPorcentoDaMeta = verificarSeFaturamentoFoiIgualOuMaiorAOitentaPorcentoDaMeta(
-				OitentaPorcentoDaMeta, metaDeFaturamentoAnual, faturamentoRealDaEmpresaNoUltimoAno);
+		boolean faturamentoFoiIgualOuMaiorAOitentaPorcentoDaMeta = verificarSeFaturamentoFoiIgualOuMaiorAOitentaPorcentoDaMeta(
+				oitentaPorcentoDaMeta, metaDeFaturamentoAnual, faturamentoRealDaEmpresaNoUltimoAno);
 
-		ExibirResultado(FaturamentoFoiMaiorOuIgualMeta, mediaDoSalarioDoFuncionario,
-				FaturamentoFoiIgualOuMaiorAOitentaPorcentoDaMeta, OitentaPorcentoDaMeta);
+		exibirResultado(faturamentoFoiMaiorOuIgualMeta, mediaDoSalarioDoFuncionario,
+				faturamentoFoiIgualOuMaiorAOitentaPorcentoDaMeta, oitentaPorcentoDaMeta);
 	}
 
 	public static double receberMetaDeFaturamentoAnual() {
@@ -47,22 +47,22 @@ public class Exercicio02 {
 		return (metaDeFaturamentoAnual * 0.8);
 	}
 
-	public static boolean verificarSeFaturamentoFoiIgualOuMaiorAOitentaPorcentoDaMeta(double PorcentagemDe80DaMeta,
+	public static boolean verificarSeFaturamentoFoiIgualOuMaiorAOitentaPorcentoDaMeta(double porcentagemDe80DaMeta,
 			double metaDeFaturamentoAnual, double faturamentoRealDaEmpresaNoUltimoAno) {
 
 		return faturamentoRealDaEmpresaNoUltimoAno < metaDeFaturamentoAnual
-				&& faturamentoRealDaEmpresaNoUltimoAno >= PorcentagemDe80DaMeta;
+				&& faturamentoRealDaEmpresaNoUltimoAno >= porcentagemDe80DaMeta;
 	}
 
-	public static void ExibirResultado(boolean FaturamentoFoiMaiorOuIgualMeta, double mediaDoSalarioDoFuncionario,
-			boolean FaturamentoFoiIgualOuMaiorAOitentaPorcentoDaMeta, double OitentaPorcentoDaMeta) {
+	public static void exibirResultado(boolean faturamentoFoiMaiorOuIgualMeta, double mediaDoSalarioDoFuncionario,
+			boolean faturamentoFoiIgualOuMaiorAOitentaPorcentoDaMeta, double oitentaPorcentoDaMeta) {
 
-		if (FaturamentoFoiMaiorOuIgualMeta) {
+		if (faturamentoFoiMaiorOuIgualMeta) {
 
 			JOptionPane.showMessageDialog(null, "Seu prêmio será: " + mediaDoSalarioDoFuncionario + "R$");
-		} else if (FaturamentoFoiIgualOuMaiorAOitentaPorcentoDaMeta) {
+		} else if (faturamentoFoiIgualOuMaiorAOitentaPorcentoDaMeta) {
 
-			JOptionPane.showMessageDialog(null, "Seu prêmio será: " + OitentaPorcentoDaMeta + "R$");
+			JOptionPane.showMessageDialog(null, "Seu prêmio será: " + oitentaPorcentoDaMeta + "R$");
 		} else {
 			JOptionPane.showMessageDialog(null, "Não recebe prêmio.");
 		}
