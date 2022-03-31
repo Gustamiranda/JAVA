@@ -1,6 +1,6 @@
 package MetodosDeOrdenamento;
 
-public class selectionSort {
+public class SelectionSort {
 
 	public static void main(String[] args) {
 		int quantidade = 10000;
