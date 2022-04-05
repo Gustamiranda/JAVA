@@ -50,10 +50,10 @@ public class Exercicio11 {
 	public static void exibirResultado(double salarioDoColaborador, boolean salarioAte280, boolean salarioAte700,
 			boolean salarioAte1500, boolean salarioAcimaDe1500) {
 		if (salarioAte280) {
-			JOptionPane.showMessageDialog(null, "salário antes do reajuste: " + salarioDoColaborador + "R$");
-			JOptionPane.showMessageDialog(null, "percentual de aumento aplicado: " + AUMENTO_DE_VINTE_PORCENTO + "%");
 			JOptionPane.showMessageDialog(null,
-					"valor do aumento: " + ((AUMENTO_DE_VINTE_PORCENTO * salarioDoColaborador)));
+					"salário antes do reajuste: " + salarioDoColaborador + "R$" + "percentual de aumento aplicado: "
+							+ AUMENTO_DE_VINTE_PORCENTO + "%" + "valor do aumento: "
+							+ AUMENTO_DE_VINTE_PORCENTO * salarioDoColaborador);
 			JOptionPane.showMessageDialog(null, " novo salário, após o aumento: " + salarioDoColaborador
 					+ (AUMENTO_DE_VINTE_PORCENTO * salarioDoColaborador));
 		} else if (salarioAte700) {

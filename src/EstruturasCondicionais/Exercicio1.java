@@ -8,24 +8,24 @@ public class Exercicio1 {
 
 	public static void main(String[] args) {
 
-		PedirnumerosEExibirOMaior();
+		pedirNumerosEExibirOMaior();
 
 	}
 
-	public static void PedirnumerosEExibirOMaior() {
+	public static void pedirNumerosEExibirOMaior() {
 
-		int[] numeros = new int[2];
+		float[] numero = new float[2];
 
-		int maior = 0;
+		float maior = 0;
 
-		for (int c = 0; c < numeros.length; c++) {
+		for (int c = 0; c < numero.length; c++) {
 
 			System.out.print("Informe o " + (c + 1) + "° Numero: ");
-			numeros[c] = scanner.nextInt();
+			numero[c] = scanner.nextInt();
 
-			if (numeros[c] > maior) {
+			if (numero[c] > maior) {
 
-				maior = numeros[c];
+				maior = numero[c];
 			}
 		}
 		System.out.print("Maior numero: " + maior);
