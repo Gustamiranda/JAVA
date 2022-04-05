@@ -58,7 +58,7 @@ public class Exercicio11 {
 					+ (AUMENTO_DE_VINTE_PORCENTO * salarioDoColaborador));
 		} else if (salarioAte700) {
 			JOptionPane.showMessageDialog(null, "salário antes do reajuste: " + salarioDoColaborador + "R$");
-			JOptionPane.showMessageDialog(null, "percentual de aumento aplicado: " + AUMENTO_DE_VINTE_PORCENTO + "%");
+			JOptionPane.showMessageDialog(null, "percentual de aumento aplicado: " + AUMENTO_DE_QUINZE_PORCENTO + "%");
 			JOptionPane.showMessageDialog(null,
 					"valor do aumento: " + ((AUMENTO_DE_QUINZE_PORCENTO * salarioDoColaborador)));
 			JOptionPane.showMessageDialog(null, " novo salário, após o aumento: " + salarioDoColaborador

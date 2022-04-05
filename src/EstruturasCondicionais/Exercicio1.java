@@ -31,5 +31,5 @@ public class Exercicio1 {
 		System.out.print("Maior numero: " + maior);
 
 	}
-	
+
 }
