@@ -17,23 +17,43 @@ public class Exercicio12 {
 		double salarioBruto = HorasTrabalhadas * valorDaHora;
 
 		boolean salarioAte900 = salarioBruto > 0 && salarioBruto <= 900;
-		boolean salarioAte1500 = salarioBruto > 900 && salarioBruto <= 1500;
-		boolean salarioAte2500 = salarioBruto > 1500 && salarioBruto <= 2500;
+		boolean salarioAcimaDe900 = salarioBruto > 900 && salarioBruto <= 1500;
+		boolean salarioAcimaDe1500 = salarioBruto > 1500 && salarioBruto <= 2500;
 		boolean salarioAcimaDe2500 = salarioBruto > 2500;
 
+		double descontoDoImpostoDeRenda, totalDeDescontos;
+		double descontoDoSindicato = salarioBruto * 0.3;
+
 		if (salarioAte900) {
+			System.out.print("Isento");
+			System.out.print("\nSalário: " + salarioBruto + "R$");
+		} else if (salarioAcimaDe900) {
 
-			double descontoDoIR = salarioBruto * 0.5;
-			double descontoDoINSS = salarioBruto * 0.10;
-			double descontoDoFGTS = salarioBruto * 0.11;
-			double totalDeDescontos = descontoDoIR + descontoDoINSS + descontoDoFGTS;
-			
-			System.out.print("Salário bruto: " + salarioBruto + "R$ ");
-			System.out.println("Total de descontos: " + totalDeDescontos + "R$");
-			System.out.println("Salário liquido: " + (salarioBruto - totalDeDescontos)+ "");
-		
+			descontoDoImpostoDeRenda = salarioBruto * 0.5;
+			totalDeDescontos = descontoDoImpostoDeRenda + descontoDoSindicato;
+
+			System.out.print("Salário bruto: " + (salarioBruto) + "R$ ");
+			System.out.print("\nTotal de descontos: " + totalDeDescontos + "R$");
+			System.out.print("\nSalário liquido: " + (salarioBruto - totalDeDescontos) + "");
+		} else if (salarioAcimaDe1500) {
+
+			descontoDoImpostoDeRenda = salarioBruto * 0.10;
+			totalDeDescontos = descontoDoImpostoDeRenda + descontoDoSindicato;
+
+			System.out.print("Salário bruto: " + (salarioBruto) + "R$ ");
+			System.out.println("\nTotal de descontos: " + totalDeDescontos + "R$");
+			System.out.println("\nSalário liquido: " + (salarioBruto - totalDeDescontos) + "");
+		} else if (salarioAcimaDe2500) {
+
+			descontoDoImpostoDeRenda = salarioBruto * 0.20;
+			totalDeDescontos = descontoDoImpostoDeRenda + descontoDoSindicato;
+
+			System.out.print("Salário bruto: " + (salarioBruto) + "R$ ");
+			System.out.println("\nTotal de descontos: " + totalDeDescontos + "R$");
+			System.out.println("\nSalário liquido: " + (salarioBruto - totalDeDescontos) + "");
+		} else {
+			System.out.println("Valores inválidos");
 		}
-
 	}
 
 }
