@@ -1,4 +1,4 @@
-package Interacao;
+package Iteracao;
 
 import java.util.Scanner;
 
