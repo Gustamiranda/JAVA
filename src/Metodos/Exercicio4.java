@@ -10,22 +10,33 @@ public class Exercicio4 {
 
 		int numeroParaMult = pedirNumero();
 
-		mostrarTabuada(numeroParaMult);
+		if (numeroParaMult < 0) {
+			mostrarErro();
+		} else {
+			mostrarTabuada(numeroParaMult);
+		}
+
 	}
 
 	static int pedirNumero() {
 
 		System.out.print("Informe um numero: ");
 		int numero = scanner.nextInt();
+
 		return numero;
+
 	}
 
 	static void mostrarTabuada(int numeroParaMult) {
-		System.out.println("Tabuada do numero "+ numeroParaMult + ": ");
+		System.out.println("Tabuada do numero " + numeroParaMult + ": ");
 		for (int i = 0; i <= 10; i++) {
 
 			System.out.println("\n" + numeroParaMult + "X" + i + "= " + (numeroParaMult * i));
-		}	
+		}
 	}
 
+	static void mostrarErro() {
+		System.err.print("Erro");
+		System.exit(0);
+	}
 }
