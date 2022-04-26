@@ -13,41 +13,74 @@ public class Exercicio03 {
 		System.out.println("Informe o segundo numero: ");
 		int segundoNumero = scanner.nextInt();
 
-		mostrarOperações();
-		int Operação = escolherOperação();
+		Integer operacao = escolhaAOperacao(scanner);
 
+		int resultado = calculo(operacao, primeiroNumero, segundoNumero);
+
+		mostrarResultado(resultado);
 	}
 
-	public static void mostrarOperações() {
-		System.out.print("Operações \n1= +  2= x  3= / 4 = - ");
+	static Integer escolhaAOperacao(Scanner scanner) {
+		System.out.println("ESCOLHA A OPERAÇÃO");
+		String[] operacoes = new String[] { "Subtração", "Adição","Divisão", "Multplicação" };
+		for (int i = 0; i < operacoes.length; i++) {
+			System.out.println("[" + (i+1)  + "] " + operacoes[i]);
+		}
+		System.out.print("Digite a operação: ");
+		return scanner.nextInt();
 	}
 
-	public static int escolherOperação() {
+	static int calculo(Integer operacao, int primeiroNumero, int segundoNumero) {
 
-		System.out.println("\nEscolha a opeação: ");
-		int escolhaDeOperação = scanner.nextInt();
+		Integer calculo = null;
 
-		return escolhaDeOperação;
+		switch (operacao) {
+
+		case 1: {
+			calculo = subtracao(primeiroNumero, segundoNumero);
+			break;
+		}
+		case 2: {
+			calculo = adicao(primeiroNumero, segundoNumero);
+			break;
+		}
+		case 3: {
+			calculo = Divisao(primeiroNumero, segundoNumero);
+			break;
+		}
+		case 4: {
+			calculo = multiplicacao(primeiroNumero, segundoNumero);
+			break;
+		}
+		default:
+			System.err.println("Escolha uma operação válida!");
+			System.exit(0);
+		}
+		return calculo;
 	}
 
-	public static void adicao(int primeiroNumero, int segundoNumero) {
+	static int adicao(int primeiroNumero, int segundoNumero) {
 
-		System.out.println(primeiroNumero + segundoNumero);
+		return primeiroNumero + segundoNumero;
 	}
 
-	public static void multiplicacao(int primeiroNumero, int segundoNumero) {
+	static int subtracao(int primeiroNumero, int segundoNumero) {
 
-		System.out.println(primeiroNumero * segundoNumero);
+		return primeiroNumero - segundoNumero;
 	}
 
-	public static void Divisao(int primeiroNumero, int segundoNumero) {
+	static int Divisao(int primeiroNumero, int segundoNumero) {
 
-		System.out.println(primeiroNumero / segundoNumero); 
+		return primeiroNumero / segundoNumero;
 	}
 
-	public static void subtracao(int primeiroNumero, int segundoNumero) {
+	static int multiplicacao(int primeiroNumero, int segundoNumero) {
 
-		System.out.println(primeiroNumero - segundoNumero); 
+		return primeiroNumero * segundoNumero;
 	}
 
+	static void mostrarResultado(int resultado) {
+
+		System.out.println("Resultado: " + resultado);
+	}
 }
