@@ -11,6 +11,5 @@ public class Encapsulamento {
 		System.out.println("Nome cliente "+ cliente.getNome());
 		System.out.println("Primeiro nome: "+ cliente.getPrimeiroNome());
 		System.out.println("Ultimo nome: "+ cliente.getUltimoNome());
-	
 	}
 }
