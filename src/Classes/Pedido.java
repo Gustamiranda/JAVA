@@ -1,7 +1,7 @@
 package Classes;
 
 public class Pedido {
-	
+
 	Byte codigo;
 	Double subtotal;
 	Double desconto;
@@ -32,13 +32,11 @@ public class Pedido {
 	}
 
 	public Double getTotal() {
-		return total;
+		return total-subtotal;
 	}
 
 	public void setTotal(Double total) {
-		this.total = total;
-	}
-
-}
+		// Não é mais necessário	
+		}
 
 }
