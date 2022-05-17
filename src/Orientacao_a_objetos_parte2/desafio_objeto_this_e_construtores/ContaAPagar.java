@@ -2,10 +2,17 @@ package Orientacao_a_objetos_parte2.desafio_objeto_this_e_construtores;
 
 public class ContaAPagar {
 
+	private static final SituacaoConta PENDENTE = null;
+	private static final SituacaoConta PAGA = null;
 	String descricao;
 	Double valor;
 	String dataDeVencimento;
 	fornecedor Fornecedor;
+	private SituacaoConta situacaoConta;
+
+	public SituacaoConta getSituacaoConta() {
+		return situacaoConta;
+	}
 
 	public ContaAPagar(fornecedor Fornecedor, String descricao, Double valor, String dataDeVencimento) {
 
@@ -13,15 +20,23 @@ public class ContaAPagar {
 		this.valor = valor;
 		this.dataDeVencimento = dataDeVencimento;
 		this.Fornecedor = Fornecedor;
+		this.situacaoConta = situacaoConta;
 	}
 
 	public ContaAPagar() {
-		// TODO Auto-generated constructor stub
+		this.situacaoConta = PENDENTE;
 	}
 
 	void pagar() {
-		System.out.println("Pagando conta: " + this.getDescricao() + "no valor de " + this.getValor()
-				+ " do fornecedor " + this.getFornecedor());
+		if (SituacaoConta.PAGA.equals(getSituacaoConta())) {
+			System.out.println("Não pode pagar uma conta que já está paga: " + getDescricao() + ".");
+		} else if (SituacaoConta.CANCELADA.equals(getSituacaoConta())) {
+			System.out.println("Não pode pagar uma conta que já está cancelada: " + getDescricao() + ".");
+		} else {
+
+			System.out.println("Pagando conta: " + this.getDescricao() + "no valor de " + this.getValor()
+					+ " do fornecedor " + this.getFornecedor());
+		}
 
 	}
 
