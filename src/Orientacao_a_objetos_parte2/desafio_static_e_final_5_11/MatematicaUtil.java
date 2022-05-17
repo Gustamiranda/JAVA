@@ -1,4 +1,4 @@
-package desafio_static_e_final_5_11;
+package Orientacao_a_objetos_parte2.desafio_static_e_final_5_11;
 
 import java.util.Scanner;
 
@@ -14,7 +14,7 @@ public class MatematicaUtil {
 	}
 
 	public static double calcularAreaCirculo(double area) {
-		
+
 		return area * area * MatematicaUtil.PI;
 	}
 }
