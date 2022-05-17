@@ -1,4 +1,4 @@
-package Orientacao_a_objetos_parte2.enumeracoes;
+package Orientacao_a_objetos_parte2.enumeracoes.Carta;
 
 public enum Naip {
 
