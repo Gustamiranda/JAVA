@@ -8,7 +8,7 @@ public class ProdutoPerecivel extends Produto {
 
 	public void identificar() {
 		super.identificar();
-	
+
 		System.out.println("Minha descrição é: " + dataValidade);
 	}
 }
