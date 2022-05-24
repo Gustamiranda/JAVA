@@ -8,6 +8,6 @@ public class TesteInterface {
 		e.enviar("GerundinoMacedônio@gmail.com");
 		NotaFiscal n = (NotaFiscal) e;
 		n.adicionarPedido("Caixa de leite");
-
+ 
 	}
 }
