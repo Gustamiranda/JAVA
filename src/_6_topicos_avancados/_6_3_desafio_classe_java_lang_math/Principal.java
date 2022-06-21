@@ -9,20 +9,21 @@ public class Principal {
 
 		Scanner scanner = new Scanner(System.in);
 
-		int quantidaDeJogos;
+		int quantidaDeJogos[] = new int[1];
 
-		System.out.println("Informe a quantidade de jogos a serem feitos: ");
-		quantidaDeJogos = scanner.nextInt();
+		for (int c = 0; c < 1; c++) {
 
-		Random aleatorio = new Random();
-
-		for (int c = 0; c <= quantidaDeJogos; c++) {
-
-			int sequencia = aleatorio.nextInt(quantidaDeJogos) + 1;
-
-			System.out.println("sequencia de jogos: " + sequencia);
+			System.out.println("Informe o número de jogos que você deseja: ");
+			quantidaDeJogos[c] = scanner.nextInt();
 		}
 
-	}
+		for (int c = 0; c <= quantidaDeJogos[c]; c++) {
+			for (int b = 0; b < 6; b++) {
+				double sequencia = Math.random() * 60;
 
+				System.out.println("Números sorteados: " + Math.round(sequencia));
+
+			}
+		}
+	}
 }
